@@ -1,19 +1,26 @@
+import { useEffect, useState } from "react";
+import BlogList from "./BlogList";
+
 const Home = () => {
-    const todo1 = "Learn React until Sunday";
-    const todo2 = "Plan features on Saturday";
-    const todo3 = "Kick-Off the project on Monday";
-      
-    return (
-        <div className="content">
-            <h1>Work in progress</h1>
-            <h3 >To-Dos:</h3>
-            <ul>
-                <li>{ todo1 }</li>
-                <li>{ todo2 }</li>
-                <li>{ todo3 }</li>
-            </ul>
-        </div>
-    );
+  const [blogs, setBlogs] = useState([
+    { title: 'My new website', body: 'lorem ipsum...', author: 'mario', id: 1 },
+    { title: 'Welcome party!', body: 'lorem ipsum...', author: 'yoshi', id: 2 },
+    { title: 'Web dev top tips', body: 'lorem ipsum...', author: 'mario', id: 3 }
+  ])
+
+  const handleDelete = (id) => {
+    setBlogs(blogs.filter((blog) => blog.id !== id)) 
+  }  
+
+  useEffect(() => {
+    console.log("LMAO")
+  }, [])
+
+  return (
+    <div className="home">
+      <BlogList blogs={blogs} title="All Blogs" handleDelete={handleDelete}/>
+    </div>
+  );
 }
  
 export default Home;
