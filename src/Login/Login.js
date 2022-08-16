@@ -7,8 +7,8 @@ const Login = () => {
     return (
         <div className="login">
             <nav className="login-nav">
-                <h3>no account? </h3>
-                <button>REGISTER</button>
+                <p>Don't have an account yet?</p>
+                <button>Sign up</button>
             </nav>
             <main className="login-content">
                 <div className="login-header">

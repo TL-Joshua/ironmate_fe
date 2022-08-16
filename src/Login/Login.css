@@ -17,6 +17,22 @@
   justify-content: end;
 }
 
+.login-nav button{
+    text-align: center;
+
+    width: 76px;
+    height: 32px;
+  
+    font-size: 0.7em;
+
+    margin: 14px;
+  
+    cursor: pointer;
+    border-width: 1px;
+    background-color: white;
+    color: black;
+}
+
 .login-content {
   width: 100%;
   height: 100%;
