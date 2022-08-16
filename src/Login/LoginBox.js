@@ -37,22 +37,27 @@ const LoginBox = () => {
     return (
             <div className="login-box">
                 <form className="login-form" onSubmit={handleSumbmit}>
-                    <label className="login-input">Email</label>
-                    <input 
-                        className="login-input" 
-                        type="email" 
-                        placeholder="myname@jeff.com" 
-                        onChange={(e) => {setLoginEmail(e.target.value)}}
-                    />
-
-                    <label className="login-input">Password</label>
-                    <input 
-                        className="login-input" 
-                        type="password" 
-                        placeholder="At least 8 characters" 
-                        onChange={(e) => {setloginPassword(e.target.value)}}
-                    />
                     
+                    <div className="login-input-group">
+                        <label className="login-input">Email</label>
+                        <input 
+                            className="login-input" 
+                            type="email" 
+                            placeholder="myname@jeff.com" 
+                            onChange={(e) => {setLoginEmail(e.target.value)}}
+                        />
+                    </div>
+                    
+                    <div className="login-input-group">
+                        <label className="login-input">Password</label>
+                        <input 
+                            className="login-input" 
+                            type="password" 
+                            placeholder="At least 8 characters" 
+                            onChange={(e) => {setloginPassword(e.target.value)}}
+                        />
+                    </div>
+
                     <a className="login-input" href="/resetpassword">Forgot password?</a>
                     <input className="login-input login-button" type="submit" value="Log in to IronMate"/>
                 </form>
