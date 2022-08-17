@@ -1,10 +1,29 @@
 {
-"a": [
+"profiles": [
 {
-    "name": "penis",
-    "age": "small"
-}        
-]
-    
+    "name": "Son Goku",
+    "age": "43",
+    "bio": "Yo, I am Goku, I am going to be a lot stronger than I ever was!",
+    "id":1,
+    "icon": "ReactPics/son-goku-2.webp"
+
+},
+{
+    "name": "Monkey D. Ruffy",
+    "age": "19",
+    "bio": "Are we friends? Or are we foes? That kind of thing you decide yourselves!",
+    "id": 2
+},
+
+  
+{
+        "name": " Naruto Uzumaki",
+        "age": "33",
+        "bio": "Hard work is worthless for those that do not believe in themselves.",
+        "id": 3
+    }
+    ]
+
+
 }
     
