@@ -1,6 +1,6 @@
 import ButtonsYesNo from './ButtonsYesNo';
 import './index.css';
-import UserInfo from './Matching/UserInfo';
+import UserInfo from './UserInfo';
 import UserPic from './UserPic';
 
 function Matching() {
