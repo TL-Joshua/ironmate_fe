@@ -1,9 +1,23 @@
-const UserInfo = () => {
+import { useEffect, useState } from "react";
+
+function UserCards (){
+    const {Users, setUser} = useState([
+    {
+        name: 'uncle phil',
+        url: ''
+    },
+    {
+        name: 'kimo drizzy',
+        url: ''
+    }
+    ]);
     return (  
-        <nav className="UserInfo">
-            "name","age"
-        </nav> 
+       <div>
+            <h1>Users</h1>
+       </div>
     );
+
+
 }
  
 export default UserInfo;
