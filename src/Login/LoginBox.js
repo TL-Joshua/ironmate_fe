@@ -28,6 +28,9 @@ const LoginBox = () => {
                 alert("Email or password wrong")
             }
         })
+        .catch(() => {
+            alert("OOPS, something went wrong." + "\n" + "(Turn on json-server on port 3004 😉)")
+        })
 
         e.preventDefault();
     }
