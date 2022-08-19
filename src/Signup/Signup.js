@@ -1,6 +1,6 @@
 import "./Signup.css"
 import SignupBox from "./SignupBox";
-
+import { Link } from "react-router-dom";
 
 const SignUp = () => {
 
@@ -10,7 +10,9 @@ const SignUp = () => {
         <div className="main">
             <nav className="nav">
                 <p>Already have an account?</p>
-                <button>Log in</button>
+                <Link to="/login">
+                    <button>Log in</button>            
+                </Link>
             </nav>
             <main className="content">
                 <div className="header">

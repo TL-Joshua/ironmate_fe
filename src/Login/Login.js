@@ -1,6 +1,6 @@
 import "./Login.css"
 import LoginBox from "./LoginBox";
-
+import { Link } from "react-router-dom";
 
 const Login = () => {
 
@@ -8,7 +8,9 @@ const Login = () => {
         <div className="main">
             <nav className="nav">
                 <p>Don't have an account yet?</p>
-                <button>Sign up</button>
+                <Link to="/signup">
+                    <button>Sign up</button>
+                </Link>
             </nav>
             <main className="content">
                 <div className="header">
