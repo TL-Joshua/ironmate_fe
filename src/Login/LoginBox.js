@@ -2,35 +2,33 @@ import { useState } from "react";
 
 const LoginBox = () => {
     
-    const [loginEmail, setLoginEmail] = useState("");
-    const [loginPassword, setloginPassword] = useState("");
-
-    //diese Daten später in JSON Server
-    const userData = [
-        {userMail: "joshua@nguyen.de", userPassword: "123"},
-        {userMail: "haus@haus.de", userPassword: "Haus"},
-        {userMail: "monkey@monkey.de", userPassword: "Affe"},
-    ]
+    const [loginEmail, setLoginEmail] = useState(null);
+    const [loginPassword, setloginPassword] = useState(null);
 
     const handleSumbmit = (e) => {
-        //get request an Server, um alle User zu finden
-        const users = userData.filter((user) => {
-            return user.userMail === loginEmail;
+
+        let succesfulLogin;
+
+        fetch("http://localhost:3004/loginData?userEmail=" + loginEmail)
+        .then(res => {
+            return res.json()
+        })
+        .then(json => {
+            if(Array.isArray(json) && json.length === 1) { //teste ob genau ein User unter loginEmail gefunden wurde
+                let user = json[0];
+                if (user.userPassword === loginPassword) {
+                    succesfulLogin = true;
+                } else { succesfulLogin = false}
+            } else {succesfulLogin = false}
+        })
+        .then(() => {
+            if (succesfulLogin) {
+                alert("LOGIN SUCCESSFUL")
+            } else {
+                alert("Email or password wrong")
+            }
         })
 
-        let foundUser
-        if(users.length === 1) {
-            foundUser = users[0]
-            if (foundUser.userPassword === loginPassword) {
-                alert("User found and correct password")
-                console.log(foundUser) //gebe Login Token für diesen User frei
-            }
-            else {
-                alert("Passwort falsch :(")
-            }
-        } else {
-            alert("User not found")
-        }
         e.preventDefault();
     }
 
@@ -45,6 +43,7 @@ const LoginBox = () => {
                             type="email" 
                             placeholder="myname@jeff.com" 
                             onChange={(e) => {setLoginEmail(e.target.value)}}
+                            required
                         />
                     </div>
                     
@@ -55,6 +54,7 @@ const LoginBox = () => {
                             type="password" 
                             placeholder="At least 8 characters" 
                             onChange={(e) => {setloginPassword(e.target.value)}}
+                            required
                         />
                     </div>
 
