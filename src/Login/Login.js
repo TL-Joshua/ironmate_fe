@@ -1,17 +1,19 @@
 import "./Login.css"
 import LoginBox from "./LoginBox";
-
+import { Link } from "react-router-dom";
 
 const Login = () => {
 
     return (
-        <div className="login">
-            <nav className="login-nav">
+        <div className="main">
+            <nav className="nav">
                 <p>Don't have an account yet?</p>
-                <button>Sign up</button>
+                <Link to="/signup">
+                    <button>Sign up</button>
+                </Link>
             </nav>
-            <main className="login-content">
-                <div className="login-header">
+            <main className="content">
+                <div className="header">
                     <h2>IronMate</h2>
                     <h3>Login here</h3>
                 </div>

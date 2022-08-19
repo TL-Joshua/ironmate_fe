@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-const LoginBox = () => {
+const SignupBox = () => {
     
     const [loginEmail, setLoginEmail] = useState(null);
     const [loginPassword, setloginPassword] = useState(null);
@@ -37,33 +37,48 @@ const LoginBox = () => {
                 <form className="form" onSubmit={handleSumbmit}>
                     
                     <div className="input-group">
-                        <label className="input">Email</label>
+                        {/* <label className="input">Email</label> */}
                         <input 
                             className="input" 
                             type="email" 
-                            placeholder="myname@jeff.com" 
+                            placeholder="Email" 
                             onChange={(e) => {setLoginEmail(e.target.value)}}
                             required
                         />
                     </div>
                     
                     <div className="input-group">
-                        <label className="input">Password</label>
+                        {/* <label className="input">Password</label> */}
                         <input 
                             className="input" 
                             type="password" 
-                            placeholder="At least 8 characters" 
+                            placeholder="Password" 
                             onChange={(e) => {setloginPassword(e.target.value)}}
                             required
                         />
                     </div>
 
-                    <a className="input" href="/resetpassword">Forgot password?</a>
-                    <input className="input button" type="submit" value="Log in to IronMate"/>
+                    {/* <a className="input" href="/resetpassword">Forgot password?</a> */}
+                    
+                    <div className="tou">
+                        <input type="checkbox" name="" id="tou" required/>
+                        <label className="input" for="tou">
+                            I agree to IronMates’s Terms of Service
+                        </label>
+                    </div>
+                    <div className="tou">
+                        <input type="checkbox" name="" id="privacy" required/>
+                        <label className="input" for="privacy">
+                            I accept IronMate's use of my data for the service and everything else described in the Privacy Policy and Data Processing Agreement
+                        </label>
+                    </div>
+
+
+                    <input className="input button" type="submit" value="Create my free account"/>
                 </form>
             </div>
             
     );
 }
  
-export default LoginBox;
+export default SignupBox;
