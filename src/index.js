@@ -5,6 +5,7 @@ import App from './App';
 import Login from "./Login/Login"
 
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import SignUp from './Signup/Signup';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -13,6 +14,7 @@ root.render(
       <Routes>
         <Route path="/" element={<App/>}/>
         <Route path="/login" element={<Login/>}/>
+        <Route path="/signup" element={<SignUp/>}/>
         <Route path="*" element={<p>NOTHING HERE</p>}/> {/* sog. empty Route */}
       </Routes>
     </BrowserRouter>
