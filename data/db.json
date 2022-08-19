@@ -1,5 +1,5 @@
 {
-    "users": [
+    "profiles": [
     {
         "id":"4n5pxq24kpiob12og9",
         "profile" : {
@@ -7,23 +7,15 @@
             "age": "43",
             "bio": "Yo, I am Goku, I am going to be a lot stronger than I ever was!",
             "icon-url": "https://i3-img.prosiebenmaxx.de/pis/ezone/0b5bqgELB38wdEB0AB1fHPDQCtTDCJ4UYl_Ic-IXCoYylZ0mXaheiyCf8r-rALiVAVI4STTmYcV1EDE726_Iuq2TDuTVRg38ABS6mO3Db7mLje5l28D3lekXSwN-s68cuSHODouqwtjAXvjSzKgx8Ru3NUL9FFTTVZku1i8H45OteRpmkT2lrg4z-ooHD0yE6_P4lfgNLcxUbwxgvXRV2JwPJEMeIelvy8SXurYlx-XUSA/profile:mag-996x562"
-        },        
-        "loginData": {
-            "userEmail": "son@goku.de",
-            "userPassword": "gohan"
         }
     },
     {
-        "id":"4n5pxq90zpiob12og9",
+        "id":"9x5pxq90zpiob12og9",
         "profile" : {
             "name": "Monkey D. Ruffy",
             "age": "19",
             "bio": "Are we friends? Or are we foes? That kind of thing you decide yourselves!",
             "icon-url": "https://i.pinimg.com/originals/f7/12/8b/f7128b8b867bda661ff5c65609ca88d2.png"
-        },        
-        "loginData": {
-            "userEmail": "monkeyd@ruffy.de",
-            "userPassword": "pirate"
         }
     },
     {
@@ -33,11 +25,25 @@
             "age": "33",
             "bio": "Hard work is worthless for those that do not believe in themselves.",
             "icon-url": "https://animesher.com/orig/1/162/1624/16240/animesher.com_naruto-adult-anime-boy-1624078.jpg"
-        },        
-        "loginData": {
-            "userEmail": "naruto@uzumaki.de",
-            "userPassword": "minato"
         }
+    }
+    ],
+
+    "loginData": [
+    {
+        "id":"4n5pxq24kpiob12og9",
+        "userEmail": "son@goku.de",
+        "userPassword": "gohan"
+    },
+    {
+        "id":"9x5pxq90zpiob12og9",
+        "userEmail": "monkeyd@ruffy.de",
+        "userPassword": "pirate"
+    },
+    {
+        "id":"6l1pxq24ksdwk12ogl",
+        "userEmail": "naruto@uzumaki.de",
+        "userPassword": "minato"
     }
     ]
 }
