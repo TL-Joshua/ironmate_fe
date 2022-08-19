@@ -9,10 +9,10 @@ const MatchingMain = () => {
         <div className="Matching">
             <h1>Find The Perfect Mate</h1>
             <h2>Ironmates in your Area:</h2>
-                <UserInfo/>
+                {/* <UserInfo/> */}
                 <UserPic />         
                 <ButtonsYesNo/>
-                {/* <UserCards/> */}
+                 <UserCards/> 
                 
                 
         </div>

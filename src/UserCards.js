@@ -1,7 +1,7 @@
 import React,{ useEffect, useState } from "react";
 
 function UserCards (){
-    const {users, setUser} = useState([
+    const [users, setUser] = useState([
     {
         name: 'uncle phil',
         url: ''
@@ -15,11 +15,12 @@ function UserCards (){
        <div>
             <h1>Users</h1>
 
-              {users.map(user=>(
-              return(  <div className="card" >
+              {users.map((user)=>(
+               
+               <div className="card" >
                     <h3>{user.name}</h3>
                 </div> 
-              )
+              
              ))}  
        </div>
     );
