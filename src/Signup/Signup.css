@@ -82,19 +82,37 @@
   text-align: left;
 }
 
-label.input {
-  min-width: 254px;
+.signup label.input {
+  min-width: 380px;
   font-size: 0.8em;
   margin-bottom: 8px;
   
 }
 
-input.input {
-  min-width: 254px;
+.signup input.input {
+  min-width: 380px;
   min-height: 38px;
   font-size: 0.6em;
   border-radius: 4px;
   border-width: 1px;
+  margin-bottom: 2px;
+}
+
+.signup .tou {
+  width: 386px;
+  font-size: 0.8em;
+  margin-bottom: 8px;
+
+  display: flex;
+  align-items: flex-start;
+
+}
+
+.signup input[type="checkbox"] {
+  transform: scale(1.5);
+  margin-top: 8px;
+  margin-right: 8px;
+  
 }
 
 a.input {
@@ -104,14 +122,14 @@ a.input {
 }
 
 
-.input.button {
+.signup .input.button {
   text-align: center;
   font-size: 0.6em;
   
-  min-width: 256px;
+  min-width: 380px;
   min-height: 40px;
 
-  margin-top: 20px;
+  margin-top: 10px;
 
   cursor: pointer;
 
