@@ -29,6 +29,7 @@
   
     cursor: pointer;
     border-width: 1px;
+    border-radius: 2px;
     background-color: white;
     color: black;
 }
