@@ -14,7 +14,6 @@ const LoginBox = () => {
             return res.json()
         })
         .then(json => {
-            
             if(Array.isArray(json) && json.length === 1) { //teste ob genau ein User unter loginEmail gefunden wurde
                 let user = json[0];
                 if (user.userPassword === loginPassword) {
@@ -22,12 +21,13 @@ const LoginBox = () => {
                 } else { succesfulLogin = false}
             } else {succesfulLogin = false}
         })
-
-        if (succesfulLogin) {
-            alert("LOGIN SUCCESSFUL")
-        } else {
-            alert("Email or password wrong")
-        }
+        .then(() => {
+            if (succesfulLogin) {
+                alert("LOGIN SUCCESSFUL")
+            } else {
+                alert("Email or password wrong")
+            }
+        })
 
         e.preventDefault();
     }
