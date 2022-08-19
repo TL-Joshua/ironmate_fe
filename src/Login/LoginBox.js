@@ -33,13 +33,13 @@ const LoginBox = () => {
     }
 
     return (
-            <div className="login-box">
-                <form className="login-form" onSubmit={handleSumbmit}>
+            <div className="box">
+                <form className="form" onSubmit={handleSumbmit}>
                     
-                    <div className="login-input-group">
-                        <label className="login-input">Email</label>
+                    <div className="input-group">
+                        <label className="input">Email</label>
                         <input 
-                            className="login-input" 
+                            className="input" 
                             type="email" 
                             placeholder="myname@jeff.com" 
                             onChange={(e) => {setLoginEmail(e.target.value)}}
@@ -47,10 +47,10 @@ const LoginBox = () => {
                         />
                     </div>
                     
-                    <div className="login-input-group">
-                        <label className="login-input">Password</label>
+                    <div className="input-group">
+                        <label className="input">Password</label>
                         <input 
-                            className="login-input" 
+                            className="input" 
                             type="password" 
                             placeholder="At least 8 characters" 
                             onChange={(e) => {setloginPassword(e.target.value)}}
@@ -58,8 +58,8 @@ const LoginBox = () => {
                         />
                     </div>
 
-                    <a className="login-input" href="/resetpassword">Forgot password?</a>
-                    <input className="login-input login-button" type="submit" value="Log in to IronMate"/>
+                    <a className="input" href="/resetpassword">Forgot password?</a>
+                    <input className="input button" type="submit" value="Log in to IronMate"/>
                 </form>
             </div>
             
