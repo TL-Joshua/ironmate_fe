@@ -1,10 +1,15 @@
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import uniqid from "uniqid";
+import Alert from "../Alerts/Alert";
 
 const SignupBox = () => {
-    
+    let navigate = useNavigate();
+
     const [loginEmail, setLoginEmail] = useState(null);
-    const [loginPassword, setloginPassword] = useState(null);
+    const [loginPassword, setLoginPassword] = useState(null);
+
+    const [displayAlert, setDisplayAlert] = useState(false);
 
     const handleSumbmit = (e) => {
 
@@ -24,28 +29,31 @@ const SignupBox = () => {
             if(Array.isArray(json) && json.length === 0) {
                 canCreate = true
             } else {
-                throw "ERROR: Email already in use."
+                setDisplayAlert(true)
             }
         })
         .then(() => {
-            let id = uniqid();
-            fetch("http://localhost:3004/loginData", {
-                method: "POST",
-                headers : {
-                    "Content-Type": "application/json"
-                },
-                body: JSON.stringify({id: id, userEmail: loginEmail, userPassword: loginPassword})
-            })
-            .then((res) => res.JSON)
-            .then((data) => {
-                signupSuccessful = true;
-            })
-            .catch(() => {
-                throw "ERROR: server down"
-            })
+            if (canCreate) {
+                let id = uniqid();
+                fetch("http://localhost:3004/loginData", {
+                    method: "POST",
+                    headers : {
+                        "Content-Type": "application/json"
+                    },
+                    body: JSON.stringify({id: id, userEmail: loginEmail, userPassword: loginPassword})
+                })
+                .then((res) => res.JSON)
+                .then((data) => {
+                    signupSuccessful = true;
+                    navigate("/createProfile")
+                })
+                .catch(() => {
+                    throw "ERROR: server down"
+                })
+            }
         })
         .catch((err) => {
-            alert(err)
+            alert(err + "\n" + "Is json-server running on port 3004? 😉")
         })
 
         e.preventDefault();
@@ -54,14 +62,20 @@ const SignupBox = () => {
     return (
             <div className="box">
                 <form className="form" onSubmit={handleSumbmit}>
-                    
+                    {displayAlert ? (
+                        <Alert alertText="Email already in use."/>
+                    ) : null}
                     <div className="input-group">
                         <label className="input">Email</label>
                         <input 
                             className="input" 
                             type="email" 
                             placeholder="Email" 
-                            onChange={(e) => {setLoginEmail(e.target.value)}}
+                            onChange={(e) => {
+                                setLoginEmail(e.target.value)
+                                setDisplayAlert(false)
+                            }}
+                            onFocus={() => {setDisplayAlert(false)}}
                             required
                         />
                     </div>
@@ -72,7 +86,11 @@ const SignupBox = () => {
                             className="input" 
                             type="password" 
                             placeholder="At least 8 characters" 
-                            onChange={(e) => {setloginPassword(e.target.value)}}
+                            onChange={(e) => {
+                                setLoginPassword(e.target.value)
+                                setDisplayAlert(false)
+                            }}
+                            onFocus={() => {setDisplayAlert(false)}}
                             minLength="8"
                             required
                         />
@@ -94,7 +112,7 @@ const SignupBox = () => {
                     </div>
 
 
-                    <input className="input button" type="submit" value="Create my free account"/>
+                    <input className="input button" type="submit" value="Create my free account" onClick={() => {setDisplayAlert(false)}}/>
                 </form>
             </div>
             
