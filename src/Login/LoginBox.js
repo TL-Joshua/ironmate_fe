@@ -36,8 +36,10 @@ const LoginBox = () => {
             }
         })
         .catch(() => {
-            alert("OOPS, something went wrong." + "\n" + "(Turn on json-server on port 3004 😉)")
             throw "ERROR: server down"
+        })
+        .catch((err) => {
+            alert(err + "\n" + "Is json-server running on port 3004? 😉")
         })
 
         e.preventDefault();
