@@ -54,8 +54,12 @@ flex-direction: column;
   margin-top: 20px;
 
 }
-   
 
+.card {
+  display: flex;
+  justify-content:center;
+
+}
 
 
 img{

@@ -13,13 +13,14 @@ function UserCards (){
     ]);
     return (  
        <div>
-            <h1>Users</h1>
+            <h1></h1>
 
               {users.map((user)=>(
                
                <div className="card" >
                     <h3>{user.name}</h3>
-                </div> 
+                    
+               </div> 
               
              ))}  
        </div>
