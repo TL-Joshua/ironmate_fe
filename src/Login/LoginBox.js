@@ -1,7 +1,11 @@
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
+
 
 const LoginBox = () => {
-    
+    let navigate = useNavigate();
+
+
     const [loginEmail, setLoginEmail] = useState(null);
     const [loginPassword, setloginPassword] = useState(null);
 
@@ -24,6 +28,7 @@ const LoginBox = () => {
         .then(() => {
             if (succesfulLogin) {
                 alert("LOGIN SUCCESSFUL")
+                navigate("/matching")
             } else {
                 alert("Email or password wrong")
             }
@@ -58,6 +63,7 @@ const LoginBox = () => {
                             type="password" 
                             placeholder="At least 8 characters" 
                             onChange={(e) => {setloginPassword(e.target.value)}}
+                            minLength="8"
                             required
                         />
                     </div>
