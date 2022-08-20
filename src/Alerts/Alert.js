@@ -1,6 +1,6 @@
 import "./Alert.css"
 
-const Alert = () => {
+const Alert = ({alertText}) => {
     
     
     return (
@@ -9,7 +9,7 @@ const Alert = () => {
                 <span className="material-icons">error</span>
             </div>
             <div className="content">
-                <p>Your login info is not right.</p>
+                <p>{alertText}</p>
             </div>
         </div>
     );
