@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import Alert from "../Alerts/Alert";
 
 
 const LoginBox = () => {
@@ -8,6 +9,8 @@ const LoginBox = () => {
 
     const [loginEmail, setLoginEmail] = useState(null);
     const [loginPassword, setloginPassword] = useState(null);
+
+    const [displayAlert, setDisplayAlert] = useState(false);
 
     const handleSumbmit = (e) => {
 
@@ -27,10 +30,9 @@ const LoginBox = () => {
         })
         .then(() => {
             if (succesfulLogin) {
-                alert("LOGIN SUCCESSFUL")
                 navigate("/matching")
             } else {
-                alert("Email or password wrong")
+                setDisplayAlert(true)
             }
         })
         .catch(() => {
@@ -44,14 +46,20 @@ const LoginBox = () => {
     return (
             <div className="box">
                 <form className="form" onSubmit={handleSumbmit}>
-                    
+                    {displayAlert ? (
+                    <Alert alertText="Your login info is not correct."/>
+                    ) : null}
                     <div className="input-group">
                         <label className="input">Email</label>
                         <input 
                             className="input" 
                             type="email" 
                             placeholder="myname@jeff.com" 
-                            onChange={(e) => {setLoginEmail(e.target.value)}}
+                            onChange={(e) => {
+                                setLoginEmail(e.target.value)
+                                setDisplayAlert(false)
+                            }}
+                            onFocus={() => {setDisplayAlert(false)}}
                             required
                         />
                     </div>
@@ -62,14 +70,18 @@ const LoginBox = () => {
                             className="input" 
                             type="password" 
                             placeholder="At least 8 characters" 
-                            onChange={(e) => {setloginPassword(e.target.value)}}
+                            onChange={(e) => {
+                                setloginPassword(e.target.value)
+                                setDisplayAlert(false)
+                            }}
+                            onFocus={() => {setDisplayAlert(false)}}
                             minLength="8"
                             required
                         />
                     </div>
 
                     <a className="input" href="/resetpassword">Forgot password?</a>
-                    <input className="input button" type="submit" value="Log in to IronMate"/>
+                    <input className="input button" type="submit" value="Log in to IronMate" onClick={() => {setDisplayAlert(false)}}/>
                 </form>
             </div>
             
