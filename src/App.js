@@ -1,8 +1,5 @@
-<<<<<<< HEAD
-=======
 import './App.css';
 import {Link} from "react-router-dom"
->>>>>>> origin/main
 
 function App() {
   return (
