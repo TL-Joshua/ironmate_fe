@@ -55,10 +55,18 @@ flex-direction: column;
 
 }
 
-.card {
+.card h3{
   display: flex;
   justify-content:center;
+  align-items: center;
 
+}
+
+.card h4{
+  display: flex;
+  margin-top: 30px;
+  justify-content: center;
+  align-items: center;
 }
 
 
