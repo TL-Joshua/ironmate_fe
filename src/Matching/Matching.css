@@ -1,11 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap');
 
 /* base styles */
-* {
-  margin: 0;
-  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  color:rgb(197, 146, 79);
-}
 .Matching{
 padding: 20px;
 display: flex;
