@@ -16,10 +16,10 @@ function App() {
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<Start/>}/>
-        <Route path="/login" element={<Login/>}/>
+        <Route path="/login" element={<Login handleLogin={handleLogin}/>}/>
         <Route path="/signup" element={<Signup/>}/>
         <Route element={<ProtectedRoute auth={auth}/>}>
-          <Route path="/matching" element={MatchingMain}/>
+          <Route path="/matching" element={<MatchingMain/>}/>
         </Route>
         <Route path="*" element={<p>NOTHING HERE</p>}/> {/* sog. empty Route */}
       </Routes>
