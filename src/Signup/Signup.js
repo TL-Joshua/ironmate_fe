@@ -2,7 +2,7 @@ import "./Signup.css"
 import SignupBox from "./SignupBox";
 import { Link } from "react-router-dom";
 
-const SignUp = () => {
+const Signup = () => {
 
     return (
         <div className="signup">
@@ -26,4 +26,4 @@ const SignUp = () => {
     );
 }
  
-export default SignUp;
+export default Signup;

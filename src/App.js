@@ -1,14 +1,21 @@
 import './App.css';
-import {Link} from "react-router-dom"
+import {BrowserRouter, Routes, Route} from "react-router-dom"
+import Login from "./Login/Login"
+import Start from './Start/Start';
+import Signup from './Signup/Signup';
+import MatchingMain from "./Matching/MatchingMain"
 
 function App() {
   return (
-    <div className="App">
-        <h1>🔥 IronMate Homepage</h1>
-        <Link to={"/login"}>LOGIN HERE</Link>
-        <Link to={"/signup"}>Sign up HERE</Link>
-        <Link to ={"/matching"}>Get started</Link>
-    </div>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<Start/>}/>
+        <Route path="/login" element={<Login/>}/>
+        <Route path="/signup" element={<Signup/>}/>
+        <Route path="/matching" element={<MatchingMain/>}/>
+        <Route path="*" element={<p>NOTHING HERE</p>}/> {/* sog. empty Route */}
+      </Routes>
+    </BrowserRouter>
   );
 }
 
