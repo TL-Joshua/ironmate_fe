@@ -1,21 +1,9 @@
-import React,{ useEffect, useState } from "react";
+import React,{useEffect, useState } from "react";
 
 
 function UserCards (){
-    const [users, setUser] = useState([
-    {
-        name: 'uncle phil',
-        url: 'https://i3-img.prosiebenmaxx.de/pis/ezone/0b5bqgELB38wdEB0AB1fHPDQCtTDCJ4UYl_Ic-IXCoYylZ0mXaheiyCf8r-rALiVAVI4STTmYcV1EDE726_Iuq2TDuTVRg38ABS6mO3Db7mLje5l28D3lekXSwN-s68cuSHODouqwtjAXvjSzKgx8Ru3NUL9FFTTVZku1i8H45OteRpmkT2lrg4z-ooHD0yE6_P4lfgNLcxUbwxgvXRV2JwPJEMeIelvy8SXurYlx-XUSA/profile:mag-996x562'
-    },
-    {
-        name: 'kimo drizzy',
-        url: 'https://i.pinimg.com/originals/f7/12/8b/f7128b8b867bda661ff5c65609ca88d2.png'
-    }
-    ]);
+    const [users, setUsers] = useState(null);
 
-    // const [first]= useState([
-    //     users[0]
-    // ]);
 
     useEffect(() => {
         fetch('http://localhost:8000/profiles')
@@ -24,9 +12,23 @@ function UserCards (){
         })
         .then(data => {
             console.log(data);
-            setUser(data);
+            setUsers(data);
         })
-    })
+    }, []);
+
+     return(
+         <div className="matchinghome">
+             
+              {users && users.map((user) => (
+
+                 <div className="users" key={user.id}>
+                    <h2>{user.profile.name}, {user.profile.age} </h2>
+                    <h4><img src={user.profile.iconurl} alt=""></img></h4>
+                    <h5>{user.profile.bio}</h5>
+                 </div>
+             ))}
+         </div>
+     )
 
 }
  

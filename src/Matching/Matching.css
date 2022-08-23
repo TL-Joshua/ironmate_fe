@@ -50,19 +50,28 @@ flex-direction: column;
 
 }
 
-.card h3{
+.users h3{
   display: flex;
   justify-content:center;
   align-items: center;
 
 }
 
-.card h4{
+.users h4{
   display: flex;
   margin-top: 30px;
   justify-content: center;
   align-items: center;
 }
+
+.users h5{
+  display: flex;
+  margin-top: 30px;
+  justify-content: center;
+  align-items: center;
+}
+
+
 
 
 img{
