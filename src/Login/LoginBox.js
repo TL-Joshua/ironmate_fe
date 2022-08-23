@@ -1,9 +1,9 @@
 import { useState } from "react";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, Navigate } from "react-router-dom";
 import Alert from "../Alerts/Alert";
 
 
-const LoginBox = () => {
+const LoginBox = ({handleLogin}) => {
     let navigate = useNavigate();
 
 
@@ -14,8 +14,6 @@ const LoginBox = () => {
 
     const handleSumbmit = (e) => {
 
-        let succesfulLogin;
-
         fetch("http://localhost:3004/loginData?userEmail=" + loginEmail)
         .then(res => {
             return res.json()
@@ -24,15 +22,11 @@ const LoginBox = () => {
             if(Array.isArray(json) && json.length === 1) { //teste ob genau ein User unter loginEmail gefunden wurde
                 let user = json[0];
                 if (user.userPassword === loginPassword) {
-                    succesfulLogin = true;
-                } else { succesfulLogin = false}
-            } else {succesfulLogin = false}
-        })
-        .then(() => {
-            if (succesfulLogin) {
-                navigate("/matching")
-            } else {
-                setDisplayAlert(true)
+                    handleLogin(user.id); //set auth state in App to user.id
+                    navigate("/matching", {replace: true});
+                } else {
+                    setDisplayAlert(true)
+                }
             }
         })
         .catch(() => {
