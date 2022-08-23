@@ -17,7 +17,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Start/>}/>
         <Route path="/login" element={<Login handleLogin={handleLogin}/>}/>
-        <Route path="/signup" element={<Signup/>}/>
+        <Route path="/signup" element={<Signup handleLogin={handleLogin}/>}/>
         <Route element={<ProtectedRoute auth={auth}/>}>
           <Route path="/matching" element={<MatchingMain/>}/>
         </Route>
