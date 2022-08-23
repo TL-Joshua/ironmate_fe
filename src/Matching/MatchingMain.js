@@ -3,8 +3,8 @@ import ButtonsYesNo from "./ButtonsYesNo";
 import UserCards from "./UserCards";
 import "./Matching.css"
 
-const MatchingMain = () => {
-    
+const MatchingMain = ({auth}) => {
+
     return ( 
         <div className="Matching">
             <h1>Find The Perfect Mate</h1>
