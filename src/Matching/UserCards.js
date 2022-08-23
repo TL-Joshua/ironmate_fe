@@ -17,21 +17,16 @@ function UserCards (){
     //     users[0]
     // ]);
 
-    return (  
-       <div>
-            <h1></h1>
-
-              {users.map((user)=>(
-
-               <div className="card" >
-                    <h3>{user.name}</h3>
-                    <h4><img src={user.url} alt=""></img></h4>
-               </div> 
-              
-             ))}  
-       </div>
-    );
-
+    useEffect(() => {
+        fetch('http://localhost:8000/profiles')
+        .then(res => {
+            return res.json();
+        })
+        .then(data => {
+            console.log(data);
+            setUser(data);
+        })
+    })
 
 }
  
