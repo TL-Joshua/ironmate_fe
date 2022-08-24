@@ -2,7 +2,7 @@ import "./Signup.css"
 import SignupBox from "./SignupBox";
 import { Link } from "react-router-dom";
 
-const Signup = (handleLogin) => {
+const Signup = ({handleLogin}) => {
 
     return (
         <div className="signup">
