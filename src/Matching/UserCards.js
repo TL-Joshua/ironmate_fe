@@ -6,7 +6,7 @@ function UserCards (){
 
 
     useEffect(() => {
-        fetch('http://localhost:8000/profiles/9x5pxq90zpiob12og9')
+        fetch('http://localhost:3004/profiles/9x5pxq90zpiob12og9')
         .then(res => {
             return res.json();
         })
