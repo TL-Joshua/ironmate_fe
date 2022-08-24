@@ -6,15 +6,22 @@ function UserCards (){
 
 
     useEffect(() => {
-        fetch('http://localhost:8000/profiles')
+        fetch('http://localhost:8000/profiles/9x5pxq90zpiob12og9')
         .then(res => {
             return res.json();
         })
         .then(data => {
-            console.log(data);
-            setUsers(data);
+            if(!Array.isArray(data)){
+                data = [data];
+                console.log(data);
+                setUsers(data);
+            }
+            
         })
     }, []);
+
+
+    
 
      return(
          <div className="matchinghome">
