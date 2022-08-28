@@ -2,7 +2,7 @@ import "./Login.css"
 import LoginBox from "./LoginBox";
 import { Link } from "react-router-dom";
 
-const Login = () => {
+const Login = ({handleLogin}) => {
 
     return (
         <div className="main">
@@ -17,7 +17,7 @@ const Login = () => {
                     <h2>IronMate</h2>
                     <h3>Login here</h3>
                 </div>
-                <LoginBox></LoginBox>
+                <LoginBox handleLogin={handleLogin}></LoginBox>
             </main>
         </div>
     );

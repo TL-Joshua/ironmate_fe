@@ -2,7 +2,7 @@ import "./Signup.css"
 import SignupBox from "./SignupBox";
 import { Link } from "react-router-dom";
 
-const SignUp = () => {
+const Signup = ({handleLogin}) => {
 
     return (
         <div className="signup">
@@ -19,11 +19,11 @@ const SignUp = () => {
                     <h2>IronMate</h2>
                     <h3>Find your perfect match that shares your passion for sports, outdoor hobbies & more.</h3>
                 </div>
-                <SignupBox></SignupBox>
+                <SignupBox handleLogin={handleLogin}></SignupBox>
             </main>
         </div>
     </div>
     );
 }
  
-export default SignUp;
+export default Signup;

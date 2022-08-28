@@ -3,18 +3,15 @@ import { useNavigate } from "react-router-dom";
 import uniqid from "uniqid";
 import Alert from "../Alerts/Alert";
 
-const SignupBox = () => {
+const SignupBox = ({handleLogin}) => {
     let navigate = useNavigate();
 
     const [loginEmail, setLoginEmail] = useState(null);
     const [loginPassword, setLoginPassword] = useState(null);
-
     const [displayAlert, setDisplayAlert] = useState(false);
 
     const handleSumbmit = (e) => {
-
         let canCreate
-        let signupSuccessful
 
         //Test if there is already an account with email entered
         fetch("http://localhost:3004/loginData?userEmail=" + loginEmail)
@@ -25,7 +22,7 @@ const SignupBox = () => {
             throw "ERROR: server down"
         })
         .then(json => {
-            // Test if Array is empty -> No user exists with this email
+            // Test if Array is empty, which means no user exists with this email yet
             if(Array.isArray(json) && json.length === 0) {
                 canCreate = true
             } else {
@@ -33,19 +30,18 @@ const SignupBox = () => {
             }
         })
         .then(() => {
+            let newId = uniqid();
             if (canCreate) {
-                let id = uniqid();
                 fetch("http://localhost:3004/loginData", {
                     method: "POST",
                     headers : {
                         "Content-Type": "application/json"
                     },
-                    body: JSON.stringify({id: id, userEmail: loginEmail, userPassword: loginPassword})
+                    body: JSON.stringify({id: newId, userEmail: loginEmail, userPassword: loginPassword})
                 })
-                .then((res) => res.JSON)
-                .then((data) => {
-                    signupSuccessful = true;
-                    navigate("/createProfile")
+                .then(() => {
+                    handleLogin(newId)
+                    navigate("/matching", {replace: true});
                 })
                 .catch(() => {
                     throw "ERROR: server down"
