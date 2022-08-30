@@ -4,6 +4,7 @@ import { useState } from 'react';
 import Login from "./Login/Login"
 import Start from './Start/Start';
 import Signup from './Signup/Signup';
+import Home from './Home/Home';
 import MatchingMain from "./Matching/MatchingMain"
 import ProtectedRoute from './ProtectedRoute';
 
@@ -18,6 +19,7 @@ function App() {
         <Route path="/" element={<Start/>}/>
         <Route path="/login" element={<Login handleLogin={handleLogin}/>}/>
         <Route path="/signup" element={<Signup/>}/>
+        <Route path="/Home" element={<Home/>}/>
         <Route element={<ProtectedRoute auth={auth}/>}>
           <Route path="/matching" element={<MatchingMain/>}/>
         </Route>
