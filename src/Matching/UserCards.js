@@ -30,6 +30,7 @@ function UserCards (){
         
 
     }
+    
 
         
      return(    
@@ -42,7 +43,7 @@ function UserCards (){
              ) : null
             }
                 <button onClick={handleClick}>LETS TRAIN</button>
-                <button>NEXT ONE</button>
+                <button onClick={handleClick}>NEXT ONE</button>
          </div>
      )
 
