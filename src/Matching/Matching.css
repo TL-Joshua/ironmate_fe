@@ -12,13 +12,13 @@ margin: 0 auto;
 border-bottom: 1px solid #f2f2f2;
 }
 
-.Matching h1 {
+.matchinghome h1 {
 display:flex;
 justify-content:left;
 flex-direction: column;
 }   
 
- .Matching h2 {
+ .matchinghome h2 {
   display:flex;
   justify-content:center;
   margin-top: 20px;
@@ -61,6 +61,13 @@ flex-direction: column;
   margin-top: 30px;
   justify-content: center;
   align-items: center;
+}
+
+.Matched h1 {
+  display:flex;
+  justify-content:left;
+  flex-direction: column;
+
 }
 
 

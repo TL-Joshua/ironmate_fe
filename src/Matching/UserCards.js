@@ -5,7 +5,8 @@ function UserCards (){
      //const[allUsers, setAllUsers] = useState(null)
       let allUsers;
     const [userTracker, setUserTracker] = useState(1);
-
+    const [clicked, setClicked] = useState(false);
+    // let clicked = false;
 
     useEffect(() => {
         fetch('http://localhost:3004/profiles?_start=0&_end=1')
@@ -30,24 +31,57 @@ function UserCards (){
         
 
     }
-    
+
+    const handleClick2 = () => {
+        setClicked(true);        
+        fetch('http://localhost:3004/profiles?_start=' + userTracker-1 +'&_end=' + (userTracker))
+        .then(res => {
+            return res.json();
+        })
+        .then(data => {
+            setDisplayedUser(data[0]);
+        })
+
+
+    }
+    if(clicked == true) {
+        return(    
+            <div className="Matched">
+                { displayedUser !== null ? (
+                    <>
+                    <h1>Congratulations! You gone get some gymussy from:</h1>
+                    <h3>{displayedUser.profile.name}, {displayedUser.profile.age}</h3> 
+                    <h4><img className="pic" src={displayedUser.profile.iconurl} alt=""></img></h4>
+                    <h5>{displayedUser.profile.bio}</h5>
+                    </> 
+                ) : null
+               }
+                   
+            </div>
+        )
+
+    }
 
         
      return(    
          <div className="matchinghome">
              { displayedUser !== null ? (
-                 <><h3>{displayedUser.profile.name}, {displayedUser.profile.age}</h3> 
+                 <>
+                    <h1>Find The Perfect Mate</h1>
+                    <h2>Ironmates in your Area:</h2>
+                 <h3>{displayedUser.profile.name}, {displayedUser.profile.age}</h3> 
                  <h4><img className="pic" src={displayedUser.profile.iconurl} alt=""></img></h4>
                  <h5>{displayedUser.profile.bio}</h5>
                  </> 
              ) : null
             }
-                <button onClick={handleClick}>LETS TRAIN</button>
+                <button onClick={handleClick2}>LETS TRAIN</button>
                 <button onClick={handleClick}>NEXT ONE</button>
          </div>
      )
 
         }
+    
  
 export default UserCards;
 
