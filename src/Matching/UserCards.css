@@ -1,0 +1,66 @@
+.matchinghome h1{
+    align-items: center;
+}
+
+.matchinghome h3{
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    
+  }
+  
+  .matchinghome h4{
+    display: flex;
+    margin-top: 30px;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .matchinghome h5{
+    display: flex;
+    margin-top: 30px;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .Matched h1 {
+    display:flex;
+    justify-content:center;
+    flex-direction: column;
+  
+  }
+  
+  
+  .pic {
+    height: 350px;
+    width: 350px;
+    transform: perspective(1500px) rotateY(15deg);
+    border: solid;
+    border-radius: 1rem;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 25px 50px -12px;
+    transition: transform 1s ease 0s;
+  
+
+  }
+  .pic:hover{
+    transform: perspective(3000px) rotateY(5deg);
+  }
+
+  .train{
+      background:url("https://img.icons8.com/external-fill-outline-pongsakorn-tan/344/external-biceps-health-fill-outline-pongsakorn-tan.png") no-repeat;
+      float: left;
+      width:50px;
+      height:50px;
+      background-size: cover;
+
+  }
+
+  .next{
+    background:url("https://img.icons8.com/external-others-ghozy-muhtarom/344/external-vegetable-fruits-vegetables-dashed-line-others-ghozy-muhtarom-3.png") no-repeat;
+    width:50px;
+    height:50px;
+    background-size: cover;
+      float: right;
+  }
+
+  

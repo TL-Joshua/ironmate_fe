@@ -1,16 +1,20 @@
 import React,{useEffect, useState } from "react";
+import "./UserCards.css";
+
 
 function UserCards (){
+    <div className="background"></div>
      const[displayedUser, setDisplayedUser] = useState(null)
       let allUsers;
     const [userTracker, setUserTracker] = useState(1);
     const [clicked, setClicked] = useState(false);
     const [timesClicked, setTimesClicked] = useState(0);
     var rand = Math.floor(Math.random() * (7-1+1)+1);
-    var x = rand;
+    var x = 3;
 
     
     useEffect(() => {
+      
         fetch('http://localhost:3004/profiles?_start=0&_end=1')
         .then(res => {
             return res.json();
@@ -101,8 +105,8 @@ function UserCards (){
                  </> 
              ) : null
             }
-                <button onClick={handleClick2}>LETS TRAIN</button>
-                <button onClick={handleClick}>NEXT ONE</button>
+                <button onClick={handleClick2} className="train"></button>
+                <button onClick={handleClick} className="next"></button>
          </div>
      )
 
