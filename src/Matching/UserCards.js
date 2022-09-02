@@ -6,7 +6,7 @@ function UserCards (){
     const [userTracker, setUserTracker] = useState(1);
     const [clicked, setClicked] = useState(false);
     const [timesClicked, setTimesClicked] = useState(0);
-    var rand = Math.floor(Math.random() * (9-1+1)+1);
+    var rand = Math.floor(Math.random() * (7-1+1)+1);
     var x = rand;
 
     
