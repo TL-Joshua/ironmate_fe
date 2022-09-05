@@ -7,7 +7,7 @@ import Signup from './Signup/Signup';
 import Home from './Home/Home';
 import MatchingMain from "./Matching/MatchingMain";
 import ProtectedRoute from './ProtectedRoute';
-import Profile from "./PersönlicheAngaben/Profile";
+import Profile from "./Profile/Profile";
 
 function App() {
   const [auth, setAuth] = useState(null);
@@ -21,7 +21,7 @@ function App() {
         <Route path="/login" element={<Login handleLogin={handleLogin}/>}/>
         <Route path="/signup" element={<Signup/>}/>
         <Route path="/Home" element={<Home/>}/>
-        <Route path="/profile" element={<Profile/>}/>
+        <Route path="/Profile" element={<Profile/>}/>
         <Route element={<ProtectedRoute auth={auth}/>}>
           <Route path="/matching" element={<MatchingMain/>}/>
         </Route>
