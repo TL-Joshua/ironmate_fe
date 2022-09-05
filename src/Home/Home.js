@@ -29,8 +29,8 @@ function Home() {
                     </div>
                 </ul>
             </nav>
-            <div className="content">
-                <div className="foto">
+            <div className="contenthome">
+                <div className="fotohome">
                     <img src="https://www.heandshefitness.com/wp-content/uploads/2018/08/1-1.jpg"/>
                 </div>
                 <div className="text">
@@ -40,8 +40,8 @@ function Home() {
                     </h2>
                 </div>
             </div>
-            <div className="content reverse">
-                <div className="foto">
+            <div className="contenthome.reverse">
+                <div className="fotohome">
                     <img src="https://www.johnharris.at/wp-content/uploads/Beitragsbild.jpg"/>
                 </div>  
                 <div className="text">
@@ -58,19 +58,19 @@ function Home() {
                         </h3>
                 </div>
             </div>
-            <div className="content">
-                <div className="foto">
+            <div className="contenthome">
+                <div className="fotohome">
                     <img src="https://ignitefitness.com/wp-content/uploads/2019/12/DSC_9166-scaled.jpg"/>
                 </div>
-                <div className="text">
+                <div className="texthome">
                     <h1>Your benefits with Iron Mate</h1>
                     <h3>
                     Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
                     </h3>
                 </div>
             </div>
-            <div className="content reverse">
-                <div className="foto">
+            <div className="contenthome.reverse">
+                <div className="fotohome">
                     <img src="https://th.bing.com/th/id/R.d91ee03969f65b112b83bf98986851fb?rik=gY%2fXL%2fQwtwgNHw&pid=ImgRaw&r=0" />
                 </div>
                 <div className="text">

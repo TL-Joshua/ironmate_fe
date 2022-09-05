@@ -52,7 +52,7 @@
     flex-direction: row;
     list-style: none;
 }
-.content {
+.contenthome {
     display: flex;
     justify-content: flex-start;
     flex-direction: row;
@@ -60,7 +60,7 @@
     min-height: 550px;
     padding: 40px 30px;
 }
-.content.reverse {
+.contenthome.reverse {
     display: flex;
     justify-content: flex-start;
     flex-direction: row-reverse;
@@ -68,7 +68,7 @@
     min-height: 550px;
     padding: 40px 30px;
 }
-.foto {
+.fotohome {
     min-height: 100%;
     display: flex;
     justify-content: center;
@@ -76,7 +76,7 @@
     min-width: 50%;
     background-color: rgb(98, 57, 57);
 }
-.foto img {
+.fotohome img {
     object-fit: cover;
     border-radius: 20px;
     min-width: 80%;
@@ -85,7 +85,7 @@
     margin-left: 30px;
     margin-right: 30px;
 }
-.text {
+.texthome {
     min-height: 50%;
     min-width: 40%;
     background-color: rgb(208, 203, 203);
