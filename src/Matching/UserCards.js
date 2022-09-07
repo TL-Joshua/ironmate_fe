@@ -1,5 +1,6 @@
 import React,{useEffect, useState } from "react";
 import "./UserCards.css";
+import Navbar from "./Navbar";
 
 
 function UserCards (){
@@ -79,6 +80,7 @@ function UserCards (){
             <div className="matchinghome">
                 { displayedUser !== null ? (
                     <>
+                    <div><Navbar /></div>
                     <h1>MATCH! Viel Spaß beim Training mit:</h1>
                     <h3>{displayedUser.profile.name}, {displayedUser.profile.age}</h3> 
                     <h4><img className="pic" src={displayedUser.profile.iconurl} alt=""></img></h4>
@@ -97,6 +99,7 @@ function UserCards (){
          <div className="matchinghome">
              { displayedUser !== null ? (
                  <>
+                 <div><Navbar /></div>
                  <div className="text">
                     <h1>Find The Perfect Mate</h1>
                     <h2>Ironmates in your Area:</h2>
