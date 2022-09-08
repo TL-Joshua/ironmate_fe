@@ -111,3 +111,25 @@
     border-style:outset;
      background-color: red;
   }
+
+  .retry{
+    background:url("https://cdn-icons-png.flaticon.com/512/13/13964.png") no-repeat;
+    float: left;
+    width:70px;
+    height:70px;
+    background-size: cover;
+    border: 5px black; 
+    border-style:outset;
+    background-color: rgb(255, 255, 255);
+}
+
+.message{
+  background:url("https://cdn-icons-png.flaticon.com/512/2983/2983788.png") no-repeat;
+  width:70px;
+  height:70px;
+  background-size: cover;
+  float: right;
+  border: 5px black; 
+  border-style:outset;
+   background-color: rgb(255, 255, 255);
+}

@@ -1,6 +1,9 @@
 import React,{useEffect, useState } from "react";
 import "./UserCards.css";
+import {Link} from "react-router-dom";
 import Navbar from "./Navbar";
+
+
 
 
 function UserCards (){
@@ -77,43 +80,48 @@ function UserCards (){
 
     if(clicked == true) {
         return(    
+            <><Navbar/>
             <div className="matchinghome">
-                { displayedUser !== null ? (
-                    <>
-                    <div><Navbar /></div>
-                    <h1>MATCH! Viel Spaß beim Training mit:</h1>
-                    <h3>{displayedUser.profile.name}, {displayedUser.profile.age}</h3> 
-                    <h4><img className="pic" src={displayedUser.profile.iconurl} alt=""></img></h4>
-                    <h5>{displayedUser.profile.bio}</h5>
-                    </> 
-                ) : null
-               }
-                   
-            </div>
+                    {displayedUser !== null ? (
+                        <>
+
+                            <h1>MATCH! Viel Spaß beim Training mit:</h1>
+                            <h3>{displayedUser.profile.name}, {displayedUser.profile.age}</h3>
+                            <h4><img className="pic" src={displayedUser.profile.iconurl} alt=""></img></h4>
+                            <h5>{displayedUser.profile.bio}</h5>
+
+                        </>
+                    ) : null}
+                    <Link to={"/matching"}>
+                        <button className="retry"></button></Link>
+                    <Link to={"/message"}>
+                        <button onClick={handleClick2} className="message"></button></Link>
+
+                </div></>
         )
 
     }
 
         
      return(    
-         <div className="matchinghome">
-             { displayedUser !== null ? (
-                 <>
-                 <div><Navbar /></div>
-                 <div className="text">
-                    <h1>Find The Perfect Mate</h1>
-                    <h2>Ironmates in your Area:</h2>
-                 <h3>{displayedUser.profile.name}, {displayedUser.profile.age}</h3> 
-                 <h4><img className="pic" src={displayedUser.profile.iconurl} alt=""></img></h4>
-                 <h5>{displayedUser.profile.bio}</h5>
-                 </div>
-                 </> 
-                 
-             ) : null
-            }
-                <button onClick={handleClick2} className="train"></button>
-                <button onClick={handleClick} className="next"></button>
-         </div>
+        <><Navbar/>
+        <div className="matchinghome">
+                 {displayedUser !== null ? (
+                     <>
+
+                         <div className="text">
+                             <h1>Find The Perfect Mate</h1>
+                             <h2>Ironmates in your Area:</h2>
+                             <h3>{displayedUser.profile.name}, {displayedUser.profile.age}</h3>
+                             <h4><img className="pic" src={displayedUser.profile.iconurl} alt=""></img></h4>
+                             <h5>{displayedUser.profile.bio}</h5>
+                         </div>
+                     </>
+
+                 ) : null}
+                 <button onClick={handleClick2} className="train"></button>
+                 <button onClick={handleClick} className="next"></button>
+             </div></>
      )
 
         }
