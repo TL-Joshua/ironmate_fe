@@ -1,9 +1,7 @@
 import React,{useEffect, useState } from "react";
 import "./UserCards.css";
-import Navbar from "./Navbar";
+import Navbar from "../Navbar/Navbar";
 import Matched from "../Matched/Matched";
-import { useNavigate, Navigate } from "react-router-dom";
-import App from "../App";
 
 
 
@@ -17,10 +15,7 @@ const UserCards = ({auth, handleTracker}) => {
     const [userTracker, setUserTracker] = useState(1);
     const [clicked, setClicked] = useState(false);
     const [timesClicked, setTimesClicked] = useState(0);
-    //var rand = Math.floor(Math.random() * (4-1+1)+1);
-    // var x = rand;
-     let loggedUserId = auth.id;
-    let navigate = useNavigate();
+    let loggedUserId = auth.id;
 
     
     useEffect(() => {
@@ -64,13 +59,6 @@ const UserCards = ({auth, handleTracker}) => {
         })
         setTimesClicked(timesClicked+1);
         setUserTracker(userTracker+1);
-        // fetch('http://localhost:3004/profiles?_start=' + userTracker +'&_end=' + (1 + userTracker))
-        // .then(res => {
-        //     return res.json();
-        // })
-        // .then(data => {
-        //     setDisplayedUser(data[0]);
-        // })
         }
         setTimesClicked(timesClicked+1);
         setUserTracker(userTracker+1);

@@ -1,31 +1,24 @@
 import "./Profile.css"
 import Profilebox from "./Profilebox.js";
 import { Link } from "react-router-dom";
+import Navbar from "../Navbar/Navbar";
+import React,{useEffect, useState } from "react";
+import { useNavigate, Navigate } from "react-router-dom";
 
-const Profile = () =>  {
+const Profile = ({auth}) =>  {
+    let navigate = useNavigate();
+    useEffect(() => {
+        navigate("/profile", {replace: true});
+    },[]);
+
     return(
-        <><div className="main">
-            <nav className="Navbar">
-                <ul>
-                    <div class="Logo">
-                        <li>IronMate</li>
-                    </div>
-                </ul>
-                <ul>
-                    <div class="middle">
-                        <button>Home</button>
-                        <button>Membership</button>
-                        <button>Courses</button>
-                    </div>
-                </ul>
-                <ul>
-                    <div class="Logout">
-                        <button>Log out</button>
-                    </div>
-                </ul>
-            </nav>
-                <Profilebox />
-            </div></>
-    )};
- 
+        <>
+        <Navbar />
+        <Profilebox auth={auth}/>
+        </>
+    )
+
+
+
+    }
 export default Profile;

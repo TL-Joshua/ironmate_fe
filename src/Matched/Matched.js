@@ -1,4 +1,4 @@
-import Navbar from "../Matching/Navbar"
+import Navbar from "../Navbar/Navbar";
 import {Link} from "react-router-dom";
 import { useNavigate, Navigate } from "react-router-dom";
 import React,{useEffect, useState } from "react";
@@ -8,7 +8,6 @@ import React,{useEffect, useState } from "react";
 const Matched = ({tracker}) => {
     const [user, setUser] = useState(null);
     let navigate = useNavigate();
-    console.log(tracker);
     ;
 
     useEffect(() => {

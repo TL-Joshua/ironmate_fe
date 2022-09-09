@@ -7,6 +7,7 @@ import Signup from './Signup/Signup';
 import MatchingMain from "./Matching/MatchingMain"
 import ProtectedRoute from './ProtectedRoute';
 import Matched from './Matched/Matched';
+import Profile from './Profile/Profile';
 
 function App() {
   const [auth, setAuth] = useState(null);
@@ -14,7 +15,7 @@ function App() {
   const handleLogout = () => {setAuth(null)};
   const [tracker, setTracker] = useState (null);
   const handleTracker = (tracker) => {setTracker(tracker)};
-
+  
   return (
     <BrowserRouter>
       <Routes>
@@ -24,6 +25,7 @@ function App() {
         <Route element={<ProtectedRoute auth={auth}/>}>
           <Route path="/matching" element={<MatchingMain auth={auth} handleTracker={handleTracker}/>}/>
           <Route path="/matched" element={<Matched tracker={tracker}/>}/>
+          <Route path="/profile" element={<Profile auth={auth}/>}/>
         </Route>
         <Route path="*" element={<p>NOTHING HERE</p>}/> {/* sog. empty Route */}
       </Routes>
