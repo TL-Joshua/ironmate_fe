@@ -19,7 +19,7 @@ function App() {
         <Route path="/login" element={<Login handleLogin={handleLogin}/>}/>
         <Route path="/signup" element={<Signup handleLogin={handleLogin}/>}/>
         <Route element={<ProtectedRoute auth={auth}/>}>
-          <Route path="/matching" element={<MatchingMain/>}/>
+          <Route path="/matching" element={<MatchingMain auth={auth}/>}/>
         </Route>
         <Route path="*" element={<p>NOTHING HERE</p>}/> {/* sog. empty Route */}
       </Routes>

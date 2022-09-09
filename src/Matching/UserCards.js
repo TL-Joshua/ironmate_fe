@@ -6,7 +6,7 @@ import Navbar from "./Navbar";
 
 
 
-function UserCards (){
+const UserCards = ({auth}) => {
     <div className="background"></div>
      const[displayedUser, setDisplayedUser] = useState(null)
       let allUsers;
@@ -15,6 +15,7 @@ function UserCards (){
     const [timesClicked, setTimesClicked] = useState(0);
     var rand = Math.floor(Math.random() * (7-1+1)+1);
     var x = rand;
+    let loggedUserId = auth.id;
 
     
     useEffect(() => {
@@ -37,6 +38,9 @@ function UserCards (){
             return res.json();
         })
         .then(data => {
+            if(data[0].id === loggedUserId){
+                userTracker++;
+            }
             setDisplayedUser(data[0]);
         })
         
@@ -71,6 +75,9 @@ function UserCards (){
         return res.json();
         })
         .then(data => {
+            if(data[0].id === loggedUserId){
+                userTracker++;
+            }
         setDisplayedUser(data[0]);
          })
 

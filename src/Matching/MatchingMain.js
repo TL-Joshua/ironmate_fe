@@ -8,7 +8,7 @@ const MatchingMain = ({auth}) => {
         <div className="Matching">
             {/* <h1>Find The Perfect Mate</h1>
             <h2>Ironmates in your Area:</h2> */}
-                <UserCards/> 
+                <UserCards auth={auth}/> 
         </div>
 
         
