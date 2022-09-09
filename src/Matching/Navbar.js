@@ -1,7 +1,12 @@
 import {Link} from "react-router-dom";
 import "./Navbar.css";
 
-function Navbar() {
+const Navbar = () => {
+    
+    const handleRefresh = () => {
+        window.location.reload();
+    }
+    
     return(    
         <div>
         <nav className = "navBar">
@@ -11,6 +16,7 @@ function Navbar() {
                 <button className="homeButton"></button></Link></li>
                 <li className="Profile"> <Link to={"/profilebox"}>
                     <button className="profileboxButton"></button></Link></li>
+                    <li className="Logout"><button onClick={handleRefresh} className="logoutButton"></button></li>
             </ul>
         </nav>
     </div>);

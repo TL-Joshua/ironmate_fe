@@ -20,9 +20,9 @@ ul {
   }
   
   /* Change the link color to #111 (black) on hover */
-  li a:hover {
+  /* li:hover {
     background-color: rgb(255, 255, 255);
-  }
+  } */
 
   .Logo{
     /* background: url("https://cdn-icons-png.flaticon.com/512/5604/5604936.png"); */
@@ -32,7 +32,11 @@ ul {
     font-weight: bolder;
     justify-content: center;
     position: left;
-    margin: 0 16em 0 0;
+    margin: 0 17em 0 0;
+   }
+
+   .Logo:hover{
+    background-color: rgb(201, 201, 201);
    }
 
    p{
@@ -59,3 +63,20 @@ ul {
     
   }
   
+.logoutButton{
+  background: url("https://cdn-icons-png.flaticon.com/512/5665/5665417.png");
+    width:30px;
+    height:30px;
+    background-size: cover;
+    border:none;
+    
+}
+
+.Logout{
+  float:right;
+  justify-content:center;
+  width: 30px;
+  height: 30px;
+  padding: 14px 10px 0px 10px;
+  
+}
