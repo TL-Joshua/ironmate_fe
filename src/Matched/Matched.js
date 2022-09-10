@@ -32,7 +32,7 @@ const Matched = ({tracker}) => {
                 {user !== null ? (
                     <>
 
-                        <h1>MATCH! Viel Spaß beim Training mit:</h1>
+                        <h1>MATCH! Have a great Training session with:</h1>
                         <h3>{user.profile.name}, {user.profile.age}</h3>
                         <h4><img className="pic" src={user.profile.iconurl} alt=""></img></h4>
                         <h5>{user.profile.bio}</h5>
