@@ -1,0 +1,135 @@
+.matchinghome h1{
+  color: white;
+    align-items: center;
+    border-radius: 1em 0 1em 0;
+  background-image: linear-gradient(
+    -100deg,
+    rgba(0, 0, 0, 0.8),
+    rgba(0, 0, 0, 0.8) 95%,
+    rgba(0, 0, 0, 0.8)
+  );
+}
+.matchinghome h2{
+  color: white;
+  align-items: center;
+  border-radius: 1em 0 1em 0;
+  background-image: linear-gradient(
+    -100deg,
+    rgba(0, 0, 0, 0.8),
+    rgba(0, 0, 0, 0.8) 95%,
+    rgba(0, 0, 0, 0.8)
+  );
+}
+.matchinghome h3{
+  color: white;
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    border-radius: 1em 0 1em 0;
+    background-image: linear-gradient(
+      -100deg,
+      rgba(0, 0, 0, 0.8),
+      rgba(0, 0, 0, 0.8) 95%,
+      rgba(0, 0, 0, 0.8)
+    );
+  }
+  
+  .matchinghome h4{
+    display: flex;
+    margin-top: 30px;
+    justify-content: center;
+    align-items: center;
+    
+  }
+  
+  .matchinghome h5{
+    color: white;
+    display: flex;
+    margin-top: 30px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 1em 0 1em 0;
+    background-image: linear-gradient(
+      -100deg,
+      rgba(0, 0, 0, 0.8),
+      rgba(0, 0, 0, 0.8) 95%,
+      rgba(0, 0, 0, 0.8)
+    );
+  }
+  .matchinghome{
+    background-image: url("https://cdn.iconscout.com/icon/free/png-256/dumbbells-2149915-1810210.png");
+    background-repeat: round;
+    background-size: 4%;
+    background-clip: padding-box;
+    padding: 40px;
+    border: 5px solid black; 
+    border-style:double;
+    
+  }
+
+  .Matched h1 {
+    display:flex;
+    justify-content:center;
+    flex-direction: column;
+  
+  }
+  
+  
+  .pic {
+    height: 350px;
+    width: 350px;
+    transform: perspective(1500px) rotateY(15deg);
+    border: solid;
+    border-radius: 1rem;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 25px 50px -12px;
+    transition: transform 1s ease 0s;
+  
+
+  }
+  .pic:hover{
+    transform: perspective(3000px) rotateY(5deg);
+  }
+
+  .train{
+      background:url("https://img.icons8.com/external-fill-outline-pongsakorn-tan/344/external-biceps-health-fill-outline-pongsakorn-tan.png") no-repeat;
+      float: left;
+      width:70px;
+      height:70px;
+      background-size: cover;
+      border: 5px black; 
+      border-style:outset;
+      background-color: greenyellow;
+  }
+
+  .next{
+    background:url("https://img.icons8.com/external-others-ghozy-muhtarom/344/external-vegetable-fruits-vegetables-dashed-line-others-ghozy-muhtarom-3.png") no-repeat;
+    width:70px;
+    height:70px;
+    background-size: cover;
+    float: right;
+    border: 5px black; 
+    border-style:outset;
+     background-color: red;
+  }
+
+  .retry{
+    background:url("https://cdn-icons-png.flaticon.com/512/13/13964.png") no-repeat;
+    float: left;
+    width:70px;
+    height:70px;
+    background-size: cover;
+    border: 5px black; 
+    border-style:outset;
+    background-color: rgb(255, 255, 255);
+}
+
+.message{
+  background:url("https://cdn-icons-png.flaticon.com/512/2983/2983788.png") no-repeat;
+  width:70px;
+  height:70px;
+  background-size: cover;
+  float: right;
+  border: 5px black; 
+  border-style:outset;
+   background-color: rgb(255, 255, 255);
+}

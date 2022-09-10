@@ -1,18 +1,73 @@
 import "./Home.css"
+import {Link} from "react-router-dom";
+import Navbar from "../Navbar/Navbar";
 
-function Home() {
+const Home = () => {
 
     return (
-        
-<><div>
+        <div className="Matching">
+        <Navbar/>
+        <div className="firstPic"><img src="https://i.pinimg.com/736x/d0/22/01/d022016656b3d136b5e46b7c76baa1f0--gym-workouts-ball-workouts.jpg" alt=""></img></div>
+        <h1>About us</h1>
+            <h2>IronMate is the opportunity for you to meet people with same interests and actively work with them towards your goals.
+                Through our unique matching system, we put you in touch with more than 100 other people interested in fitness.
+                Our coaches and individual fitness programmes help you optimise your tracking plan by creating your tasks and tracking your working time.
+            </h2>
+        <div className="container"><div><img src="https://pbs.twimg.com/media/ERvUtsZXUAA5OVI.jpg" alt="" /></div></div>
+        <div className="info"><h1>Your benefits with Iron Mate</h1>
+            <h3>
+                <ul className="homeUL">
+                <li>discipline!</li>
+                <li>motivation!</li>
+                <li>effective training!</li>
+                <li>new friendships!</li>
+                <li>more fun!</li></ul>
+            </h3></div>
+        <div className="container"><img src="https://pbs.twimg.com/media/DcPuFHUWkAAB2ci.jpg:large" alt="" /></div>
+        <h1>Become an Iron Club Member</h1>
+        <h3>
+        <ul className="memberUL">
+                <li>Standard Membership</li>
+                <li>Gold Membership</li>
+                <li>Iron Membership</li>
+                <p>MORE INFOS COMING SOON</p>
+        </ul>
+        </h3>
+        </div>
+
+    );
+}
+export default Home;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+{/* <><div className="Lhome">
             <nav>
                 <ul>
-                <div class = "Logo">
+                <div class = "LogoHome">
                     <li>IronMate</li>
                     </div>
                 </ul>
                 <ul>
-                <div class = "Navbar">
+                <div class = "NavbarHome">
                     <li><a href="#">Login</a></li>
                     <li><a href="#">Home</a></li>
                     </div>
@@ -26,7 +81,7 @@ function Home() {
                 Through our unique matching system, we put you in touch with more than 100 other people interested in fitness.
                 Our coaches and individual fitness programmes help you optimise your tracking plan by creating your tasks and tracking your working time.
             </h2>
-            <div class = "image">
+            <div class = "ImageHome">
             <img src="https://www.johnharris.at/wp-content/uploads/Beitragsbild.jpg" width = "530" height= "300.5"/>
             </div>
             <h1>Your benefits with Iron Mate</h1>
@@ -45,7 +100,4 @@ function Home() {
                 TextText TextText TextText TextText
                 TextText TextText TextText TextText TextText TextText</p>
 
-        </div></>
-    );
-}
-export default Home;
+        </div></> */}
