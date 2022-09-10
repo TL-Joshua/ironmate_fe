@@ -1,13 +1,14 @@
 --HOW TO USE THE IRONMATE APP--
 
 
->Starting the application<
+-Starting the application-
 
 1. Start json server on localhost: 
   json-server --watch db.json/data --port 3004
-2.Start application: npm start
+2. Start application: npm start
 
->Operation Manual<
+-Operation Manual-
+
 When entering the website, the user starts at the landing page. 
 By clicking on the upper right button(On/Off switch) in the navigation bar, the user is redirected to the login/sign up window. If the user doesn't have an account yet, he clicks on "Sign up" and creates an account by entering his email and a password. 
 After ther Login, the User enters the Matching page. Now he can see and go through several profiles of other users.
