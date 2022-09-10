@@ -1,7 +1,8 @@
 import { useState } from "react";
 
      
-     return (
+const Profilebox = () => {
+    return (
          <div className="angaben">
             <ul>
                 <h3>personal details</h3>
@@ -21,6 +22,6 @@ import { useState } from "react";
                     <li>favourite city</li>
                     <button>Save</button>
             </ul> 
-    </div>
-    )
+    </div>)}
+    ;
      export default Profilebox;

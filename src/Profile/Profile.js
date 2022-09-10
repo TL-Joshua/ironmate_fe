@@ -1,10 +1,9 @@
-import "./profile.css"
-import Profilebox from "./Profilebox";
+import "./Profile.css"
+import Profilebox from "./Profilebox.js";
 import { Link } from "react-router-dom";
 
-function Profile() {
-
-    return (
+const Profile = () =>  {
+    return(
         <><div className="main">
             <nav className="Navbar">
                 <ul>
@@ -25,10 +24,8 @@ function Profile() {
                     </div>
                 </ul>
             </nav>
-        </div><div>
                 <Profilebox />
             </div></>
-    );
-}
+    )};
  
 export default Profile;
