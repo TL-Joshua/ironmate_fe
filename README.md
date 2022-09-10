@@ -1,3 +1,27 @@
+--HOW TO USE THE IRONMATE APP--
+
+
+>Starting the application<
+
+1. Start json server on localhost: 
+  json-server --watch db.json/data --port 3004
+2.Start application: npm start
+
+>Operation Manual<
+When entering the website, the user starts at the landing page. 
+By clicking on the upper right button(On/Off switch) in the navigation bar, the user is redirected to the login/sign up window. If the user doesn't have an account yet, he clicks on "Sign up" and creates an account by entering his email and a password. 
+After ther Login, the User enters the Matching page. Now he can see and go through several profiles of other users.
+When the the user is presented the profile of another user, which he would like to get in contact with, he clicks on the left button (biceps), if thats not the case he clicks on the right button (leek).
+If two users both clicked the left button on each other, there is a Match and the user is redirected to an other window. Here, the other user with who he just matched with is shown. The user can now return to the matching page by clicking the left button (reload) or (send a message to the other user)**not implemented.
+If the User wants to view his own profile, he can click on the profile-icon in the navigation bar at the top.
+To get back to the Matching page, the user has to click on the house-icon.
+Lastly, when the user wants to logout he clicks on the upper right button(On/Off switch).
+
+
+
+
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
