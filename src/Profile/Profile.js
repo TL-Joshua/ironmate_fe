@@ -12,9 +12,10 @@ const Profile = ({auth}) =>  {
     },[]);
 
     return(
-        <>
+        <><div className="Matching">
         <Navbar />
         <Profilebox auth={auth}/>
+        </div>
         </>
     )
 

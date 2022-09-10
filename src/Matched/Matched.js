@@ -26,7 +26,8 @@ const Matched = ({tracker}) => {
 
 
     return(    
-        <><Navbar/>
+        
+        <><div className="Matching"><Navbar/>
         <div className="matchinghome">
                 {user !== null ? (
                     <>
@@ -43,7 +44,7 @@ const Matched = ({tracker}) => {
                 <Link to={"/message"}>
                     <button className="message"></button></Link>
 
-            </div></>
+            </div></div></>
     )
 }
 export default Matched;
