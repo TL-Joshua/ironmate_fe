@@ -1,6 +1,33 @@
+.homeUL{
+    list-style-position: outside;
+    display: inline-table;
+}
 
+.memberUL{
+    list-style:disc;
+}
 
-
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    float:left;
+  }
+  
+  img {
+    width: 100%;
+    height: 350px;
+  }
+  
+  .image {
+    flex-basis: 40%;
+    float: right;
+  }
+  
+  .info {
+    font-size: 20px;
+    padding-left: 20px;
+  }
 
 
 

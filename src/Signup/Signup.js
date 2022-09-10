@@ -6,7 +6,7 @@ const Signup = ({handleLogin}) => {
 
     return (
         <div className="signup">
-            <img src="https://images.unsplash.com/photo-1533240332313-0db49b459ad6?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1974&q=80" alt="" />
+            <img src="https://i.pinimg.com/originals/96/79/65/967965f0f9d751a1b6c6297aceff49df.jpg" alt="" />
         <div className="main">
             <nav className="nav">
                 <p>Already have an account?</p>

@@ -7,11 +7,11 @@
  
 }
 
-li {
+.Logo, .Home, .Profile{
   float: left;
 }
 
-li a {
+.Home a, .Profile a, .Logout a {
   display: block;
   color: white;
   padding: 14px 16px;
@@ -20,9 +20,9 @@ li a {
 }
 
 /* Change the link color to #111 (black) on hover */
-/* li:hover {
+li:hover {
   background-color: rgb(255, 255, 255);
-} */
+}
 
 .Logo{
   /* background: url("https://cdn-icons-png.flaticon.com/512/5604/5604936.png"); */
@@ -74,9 +74,9 @@ background: url("https://cdn-icons-png.flaticon.com/512/5665/5665417.png");
 
 .Logout{
 float:right;
-justify-content:center;
+/* justify-content:center;
 width: 30px;
 height: 30px;
-padding: 14px 10px 0px 10px;
+padding: 14px 10px 0px 10px; */
 
 }

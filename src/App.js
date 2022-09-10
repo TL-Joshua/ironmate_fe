@@ -20,10 +20,11 @@ function App() {
   return (
     <BrowserRouter>
       <Routes>
+      <Route path="/home" element={<Home/>}/>
         <Route path="/" element={<Start/>}/>
         <Route path="/login" element={<Login handleLogin={handleLogin}/>}/>
         <Route path="/signup" element={<Signup handleLogin={handleLogin}/>}/>
-        <Route path="/home" element={<Home/>}/>
+       
         <Route element={<ProtectedRoute auth={auth}/>}>
           <Route path="/matching" element={<MatchingMain auth={auth} handleTracker={handleTracker}/>}/>
           <Route path="/matched" element={<Matched tracker={tracker}/>}/>

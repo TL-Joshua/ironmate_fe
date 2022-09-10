@@ -23,7 +23,7 @@ const Navbar = () => {
                     <button className="homeButton"></button></Link></li>
                     <li className="Profile"> <Link to={"/profile"}>
                     <button onClick={profileClick}className="profileboxButton"></button></Link></li>
-                    <li className="Logout"><button onClick={handleRefresh} className="logoutButton"></button></li>
+                    <li className="Logout"> <Link to={"/login"}><button className="logoutButton"></button></Link></li>
 
             </ul>
         </nav>
