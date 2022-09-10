@@ -12,7 +12,7 @@ const Home = () => {
         <div className="Info1">        
         <div className="firstPic"><img src="https://i.pinimg.com/736x/d0/22/01/d022016656b3d136b5e46b7c76baa1f0--gym-workouts-ball-workouts.jpg" alt=""></img></div>
             <h3>        
-                <h1>About us</h1>
+                <h1>About Us</h1>
                 IronMate is the opportunity for you to meet people with same interests and actively work with them towards your goals.
                 Through our unique matching system, we put you in touch with more than 100 other people interested in fitness.
                 Our coaches and individual fitness programmes help you optimise your tracking plan by creating your tasks and tracking your working time.
