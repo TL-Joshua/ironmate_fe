@@ -1,61 +1,82 @@
 ul {
-    list-style-type:none;
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
-    background-color: rgb(201, 201, 201);
-   
-  }
-  
-  li {
-    float: left;
-  }
-  
-  li a {
-    display: block;
-    color: white;
-    padding: 14px 16px;
-    text-decoration: none;
-    margin: 0px 10px;
-  }
-  
-  /* Change the link color to #111 (black) on hover */
-  li a:hover {
-    background-color: rgb(255, 255, 255);
-  }
+  list-style-type:none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: rgb(201, 201, 201);
+ 
+}
 
-  .Logo{
-    /* background: url("https://cdn-icons-png.flaticon.com/512/5604/5604936.png"); */
-    max-width: 50px;
-    max-height: 50px;
-    font-size: larger;
-    font-weight: bolder;
-    justify-content: center;
-    position: left;
-    margin: 0 16em 0 0;
-   }
+li {
+  float: left;
+}
 
-   p{
-    text-align: center;
-    font-weight:bolder;
-   }
+li a {
+  display: block;
+  color: white;
+  padding: 14px 16px;
+  text-decoration: none;
+  margin: 0px 10px;
+}
 
-  .homeButton{
-    background: url("https://cdn-icons-png.flaticon.com/512/5946/5946650.png");
-    width: 30px;
-    height:30px;
-    background-size: cover;
-    border:none;
-    
-   
-  }
+/* Change the link color to #111 (black) on hover */
+/* li:hover {
+  background-color: rgb(255, 255, 255);
+} */
 
-  .profileboxButton{
-    background: url("https://cdn-icons-png.flaticon.com/512/4519/4519729.png");
-    width:30px;
-    height:30px;
-    background-size: cover;
-    border:none;
-    
-  }
+.Logo{
+  /* background: url("https://cdn-icons-png.flaticon.com/512/5604/5604936.png"); */
+  max-width: 50px;
+  max-height: 50px;
+  font-size: larger;
+  font-weight: bolder;
+  justify-content: center;
+  position: left;
+  margin: 0 17em 0 0;
+ }
+
+ .Logo:hover{
+  background-color: rgb(201, 201, 201);
+ }
+
+ p{
+  text-align: center;
+  font-weight:bolder;
+ }
+
+.homeButton{
+  background: url("https://cdn-icons-png.flaticon.com/512/5946/5946650.png");
+  width: 30px;
+  height:30px;
+  background-size: cover;
+  border:none;
   
+ 
+}
+
+.profileboxButton{
+  background: url("https://cdn-icons-png.flaticon.com/512/4519/4519729.png");
+  width:30px;
+  height:30px;
+  background-size: cover;
+  border:none;
+  
+}
+
+.logoutButton{
+background: url("https://cdn-icons-png.flaticon.com/512/5665/5665417.png");
+  width:30px;
+  height:30px;
+  background-size: cover;
+  border:none;
+  
+}
+
+.Logout{
+float:right;
+justify-content:center;
+width: 30px;
+height: 30px;
+padding: 14px 10px 0px 10px;
+
+}
