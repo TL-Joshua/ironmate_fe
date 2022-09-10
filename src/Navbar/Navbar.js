@@ -9,6 +9,10 @@ const Navbar = () => {
             <Profile/>
         )
     }
+
+    const handleRefresh = () => {
+        window.location.reload();
+    }
     
     return(    
         <div>
@@ -19,6 +23,8 @@ const Navbar = () => {
                     <button className="homeButton"></button></Link></li>
                     <li className="Profile"> <Link to={"/profile"}>
                     <button onClick={profileClick}className="profileboxButton"></button></Link></li>
+                    <li className="Logout"><button onClick={handleRefresh} className="logoutButton"></button></li>
+
             </ul>
         </nav>
     </div>);
