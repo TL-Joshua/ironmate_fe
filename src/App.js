@@ -8,6 +8,7 @@ import MatchingMain from "./Matching/MatchingMain"
 import ProtectedRoute from './ProtectedRoute';
 import Matched from './Matched/Matched';
 import Profile from './Profile/Profile';
+import Home from './Home/Home';
 
 function App() {
   const [auth, setAuth] = useState(null);
@@ -22,6 +23,7 @@ function App() {
         <Route path="/" element={<Start/>}/>
         <Route path="/login" element={<Login handleLogin={handleLogin}/>}/>
         <Route path="/signup" element={<Signup handleLogin={handleLogin}/>}/>
+        <Route path="/home" element={<Home/>}/>
         <Route element={<ProtectedRoute auth={auth}/>}>
           <Route path="/matching" element={<MatchingMain auth={auth} handleTracker={handleTracker}/>}/>
           <Route path="/matched" element={<Matched tracker={tracker}/>}/>
